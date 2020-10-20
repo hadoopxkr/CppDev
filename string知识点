@@ -1,0 +1,5 @@
+string 的转换 将其他类型转为string类型：
+    std:to_string(type) 类型来实现
+    
+字符串的拼接：
+直接使用 + , append, string 可以直接和 char * 的直接连接
