@@ -4,6 +4,7 @@ class Base{
   // const 方法中只能调用 const 方法
   void sayHello() const {
   //@1
+  
   }
   void sayHello(){
   //@2
@@ -15,3 +16,7 @@ base1->sayHello(); // @1 called
 
 const Base base2;
 base2->sayHello();// @2 will be called
+
+如果真的需要在const 方法中改变 age 的值  
+//1. 改为 mutable int age
+//2. const_cast<Base*>(this) ->age++;
