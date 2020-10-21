@@ -1,0 +1,19 @@
+class bar {
+public:
+  void foo() {
+    std::cout << "hello from member function" << std::endl;
+  }
+  
+  // add by self 
+  void test(){
+      td::thread t(&bar::foo, this);
+  }
+};
+
+int main()
+{
+  std::thread t(&bar::foo, bar());
+  t.join();
+}
+
+如果是在同一个类的成员函数中使用 
