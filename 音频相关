@@ -1,0 +1,91 @@
+adb shell dumpsys media.audio.policy 可以查看 音频 支持的输入设备 和 输出设备 以及路由信息
+
+ Config source: /odm/etc/audio/audio_policy_configuration.xml
+- Available output devices:
+  Device 1:
+  - id:  2
+  - tag name: Earpiece
+  - type: AUDIO_DEVICE_OUT_EARPIECE
+  - Profiles:
+      Profile 0:
+          - format: AUDIO_FORMAT_PCM_16_BIT
+          - sampling rates:44100, 48000
+          - channel masks:0x0001
+      Profile 1:
+          - format: AUDIO_FORMAT_PCM_32_BIT
+          - sampling rates:44100, 48000
+          - channel masks:0x0001
+  Device 2:
+  - id:  3
+  - tag name: Speaker
+  - type: AUDIO_DEVICE_OUT_SPEAKER
+  - Profiles:
+      Profile 0:
+          - format: AUDIO_FORMAT_PCM_16_BIT
+          - sampling rates:44100, 48000
+          - channel masks:0x0003
+      Profile 1:
+          - format: AUDIO_FORMAT_PCM_32_BIT
+          - sampling rates:44100, 48000
+          - channel masks:0x0003
+  Device 3:
+  - id: 12
+  - tag name: Telephony Tx
+  - type: AUDIO_DEVICE_OUT_TELEPHONY_TX
+  - Profiles:
+      Profile 0:
+          - format: AUDIO_FORMAT_PCM_16_BIT
+          - sampling rates:44100, 48000
+          - channel masks:0x0003
+      Profile 1:
+          - format: AUDIO_FORMAT_PCM_32_BIT
+          - sampling rates:44100, 48000
+          - channel masks:0x0003
+- Available input devices:
+  Device 1:
+  - id: 15
+  - tag name: Built-In Mic
+  - type: AUDIO_DEVICE_IN_BUILTIN_MIC
+  - address: bottom
+  - Profiles:
+      Profile 0:
+          - format: AUDIO_FORMAT_PCM_16_BIT
+          - sampling rates:8000, 16000, 32000, 44100, 48000
+          - channel masks:0x000c, 0x0010
+  Device 2:
+  - id: 16
+  - tag name: Built-In Back Mic
+  - type: AUDIO_DEVICE_IN_BACK_MIC
+  - address: back
+  - Profiles:
+      Profile 0:
+          - format: AUDIO_FORMAT_PCM_16_BIT
+          - sampling rates:8000, 16000, 32000, 44100, 48000
+          - channel masks:0x000c, 0x0010
+  Device 3:
+  - id: 21
+  - tag name: FM Tuner In
+  - type: AUDIO_DEVICE_IN_FM_TUNER
+  - Profiles:
+      Profile 0:
+          - format: AUDIO_FORMAT_PCM_16_BIT
+          - sampling rates:8000, 16000, 32000, 44100, 48000
+          - channel masks:0x000c, 0x0010
+  Device 4:
+  - id: 22
+  - tag name: Echo Ref In
+  - type: AUDIO_DEVICE_IN_ECHO_REFERENCE
+  - Profiles:
+      Profile 0:
+          - format: AUDIO_FORMAT_PCM_16_BIT
+          - sampling rates:8000, 16000, 32000, 44100, 48000
+          - channel masks:0x000c, 0x0010
+  Device 5:
+  - id: 19
+  - tag name: Voice Call In
+  - type: AUDIO_DEVICE_IN_TELEPHONY_RX|AUDIO_DEVICE_IN_VOICE_CALL
+  - Profiles:
+      Profile 0:
+          - format: AUDIO_FORMAT_PCM_16_BIT
+          - sampling rates:8000, 16000, 32000, 44100, 48000
+          - channel masks:0x000c, 0x0010
