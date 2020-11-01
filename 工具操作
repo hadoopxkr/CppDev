@@ -18,3 +18,6 @@ route -n
 
 #查了链路层
 arp -an
+
+#用pts 窗口连接一个socket 
+nc localhost 8090(socket监听的端口号)
