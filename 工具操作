@@ -1,0 +1,20 @@
+linux系统中安装 tcpdump
+
+执行 tcpdump -nn -i eth0 port 80(这里可以换成你想要监听的接口)
+
+tcpdump -nn -i eth0 arp or port 80
+
+
+# 查看socket 的连接
+netstat -natp  
+
+# 网络配置
+cd /etc/system/sysconfig/network-scripts/
+	ifcgf-eth0
+
+
+#查看路由
+route -n
+
+#查了链路层
+arp -an
