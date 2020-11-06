@@ -1,0 +1,22 @@
+ext{
+
+    rtcsdk_maven_url = project.hasProperty('RtcSdkMavenUrl') ? project.property('RtcSdkMavenUrl') : 'http://szg1.artifactory.inhuawei.com/artifactory/Product-cloudserviceSelfDev-snapshot'
+
+    println("rtcsdk_maven_url:"+rtcsdk_maven_url)
+}
+
+
+allprojects {
+    repositories {
+        
+        maven {
+            println("project.ext.getProperty")
+            // 这里去取上面ext中定义的变量的值
+            println(project.property('rtcsdk_maven_url'))
+            url project.property('rtcsdk_maven_url')
+        }
+      }
+    }
+    
+    // 从命令行中执行   gradlew build -Pname=value   #name是你定义的变量  （RtcSdkMavenUrl），value是你要传递的值 
+    gradlew build -PRtcSdkMavenUrl="E:\\rtc-sdk\\xx\\android\\repo"
