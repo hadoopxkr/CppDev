@@ -20,3 +20,19 @@ allprojects {
     
     // 从命令行中执行   gradlew build -Pname=value   #name是你定义的变量  （RtcSdkMavenUrl），value是你要传递的值 
     gradlew build -PRtcSdkMavenUrl="E:\\rtc-sdk\\xx\\android\\repo"
+
+    def isLocalFile = project.hasProperty('mediaServiceZipPath')
+    println("isLocalFile:"+isLocalFile)
+    downloadUrl = project.hasProperty('mediaServiceZipPath') ? project.property('mediaServiceZipPath'): downloadUrl
+    println "downloadUrl = " + downloadUrl
+    def soFiles = new File(buildDir, 'mediaservice.zip')
+    def out = new BufferedOutputStream(new FileOutputStream(soFiles))
+    if(isLocalFile){
+        // local file
+        out <<  new BufferedInputStream(new FileInputStream(new File(downloadUrl)))
+    }else{
+        // old download for http
+        out <<  new URL(downloadUrl).openStream()
+    }
+
+    out.close()
