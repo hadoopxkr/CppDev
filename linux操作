@@ -1,0 +1,2 @@
+sudo apt -f install //自动修复依赖关系
+sudo apt autoremove //自动移除不需要的依赖
