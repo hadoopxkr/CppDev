@@ -1,2 +1,5 @@
 sudo apt -f install //自动修复依赖关系
 sudo apt autoremove //自动移除不需要的依赖
+
+安装.deb 包
+  先将.deb包下载下来 然后执行 sudo dpkg -i xx.deb即可自动安装了
