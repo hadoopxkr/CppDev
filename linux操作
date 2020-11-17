@@ -16,3 +16,9 @@ sudo apt autoremove //自动移除不需要的依赖
   wget -O /etc/yum.repos.d/fedora-updates.repo http://mirrors.aliyun.com/repo/fedora-updates.repo
   dnf clean all
   dnf makecache
+
+
+https://software.opensuse.org//download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray
+
+https://developer.android.google.cn/studio/
+https://software.opensuse.org//download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray
