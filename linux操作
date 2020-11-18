@@ -22,3 +22,10 @@ https://software.opensuse.org//download.html?project=home%3Azzndb%3AQv2ray&packa
 
 https://developer.android.google.cn/studio/
 https://software.opensuse.org//download.html?project=home%3Azzndb%3AQv2ray&package=Qv2ray
+
+
+fedora install lantern  //have not yet action
+$ sudo dnf install golang-github-getlantern-lantern
+$ systemctl start --user lantern.service
+$ systemctl status --user lantern.service
+$ systemctl stop --user lantern.service
