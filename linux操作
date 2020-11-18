@@ -29,3 +29,16 @@ $ sudo dnf install golang-github-getlantern-lantern
 $ systemctl start --user lantern.service
 $ systemctl status --user lantern.service
 $ systemctl stop --user lantern.service
+
+stress:
+	stress 是一个Linux 系统压力测试工具
+	
+sysstat:
+	包含了常用的Linux性能工具，用来监控和分析系统的性能
+	包含的命令：
+	mpstat: 多核CPU 性能分析工具，用来实时查看每个CPU的性能指标，以及所有CPU的平均指标
+	pidstat: 用来实时查看进程的CPU,内存，I/O 以及上下文切换等性能指标
+	perf：perf record -g  // 等待一小段时间后， 执行 perf report
+	
+srs服务器
+janus服务器
