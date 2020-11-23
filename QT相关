@@ -1,0 +1,17 @@
+在fedora系统上安装QT，下载qt.run文件保存，添加执行权限，然后执行安装
+创建项目后运行，(需要安装 gcc g++等) 会出现 找不到GL 库的链接，网上有很多相关的资料，说需要创建什么软链接，locate libGL 查看等等 但是都没有卵用，
+
+最终的解决办法是：参考https://blog.csdn.net/k7arm/article/details/53200693?locationNum=2&fps=1
+
+sudo dnf install mesa-libGL-devel mesa-libGLU-devel
+sudo dnf install freeglut-devel
+然后用了一个openGL 的demo 测试，gcc -o test example.c -lGL -lGLU -lglut  发现能正常运行后，再去运行QT 就能正常使用了
+但是使用 locate libGL 去查看安装的openGl 后会发现 
+/opt/Qt5.14.2/Tools/QtCreator/lib/qtcreator/libGLSL.so
+/opt/Qt5.14.2/Tools/QtCreator/lib/qtcreator/libGLSL.so.4
+/opt/Qt5.14.2/Tools/QtCreator/lib/qtcreator/libGLSL.so.4.11
+/opt/Qt5.14.2/Tools/QtCreator/lib/qtcreator/libGLSL.so.4.11.1
+/opt/Qt5.14.2/Tools/QtCreator/lib/qtcreator/plugins/libGLSLEditor.so
+
+并没有网上说的 
+/usr/lib/xxx.so 的现象 ，原因未知   这玩意儿折腾了我两天。
