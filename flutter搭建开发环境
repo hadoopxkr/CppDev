@@ -1,0 +1,9 @@
+1. https://flutter.cn/community/china  在这个网站有向导
+
+2.在(用户)环境变量中添加：
+
+  FLUTTER_STORAGE_BASE_URL=https://mirrors.tuna.tsinghua.edu.cn/flutter
+  
+  PUB_HOSTED_URL=https://pub.flutter-io.cn
+  
+  然后在一个新建的目录中执行 flutter create you-app  cd you-app 执行 flutter run 就可以运行项目了
