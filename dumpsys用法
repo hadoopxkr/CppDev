@@ -1,3 +1,5 @@
 adb shell dumpsys activity
 
 adb shell dumpsys SurfaceFlinger
+
+adb shell dumpsys -help //查看帮助文档
