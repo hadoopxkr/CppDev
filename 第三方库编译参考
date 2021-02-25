@@ -1,2 +1,7 @@
 如何引入第三方的 .a 和 .so文件
     https://github.com/android/ndk-samples/blob/main/hello-libs/app/src/main/cpp/CMakeLists.txt
+    
+
+ffmpeg编译参考：
+https://mp.weixin.qq.com/s?__biz=MzIwNTIwMzAzNg==&mid=2654162543&idx=1&sn=894a6bfb0f8f652ef53860075af1754b&chksm=8cf39d5cbb84144a9d62fa80cbeed1843aadfe97bf8a30ab02474f98ec86be649d65e301674b&scene=21#wechat_redirect
+或者  https://cloud.tencent.com/developer/article/1683408
